@@ -482,19 +482,47 @@
       </form>
 
     </div>
-  </section>
+    </section>
 
-  <footer class="reveal">
-    <div class="container foot">
-      <small>© <span id="y"></span> NovaVision Agency</small>
-      <div class="links">
-        <a href="#">Política de privacidad</a>
-        <a href="#">Aviso legal</a>
-        <a href="#">Cookies</a>
-        <a href="https://instagram.com/gallegov_" target="_blank" rel="noopener">Instagram</a>
+    <section id="legal" class="reveal">
+      <div class="container">
+        <p class="eyebrow">Legal</p>
+        <h2>Documentos y avisos</h2>
+        <p class="sub">Información básica sobre cómo cuidamos tus datos, el marco legal de la web y el uso de cookies.</p>
+
+        <div class="section-grid">
+          <article id="privacidad" class="card">
+            <h3 class="card-title">Política de privacidad</h3>
+            <p>Responsable: NovaVision Agency. Finalidad: responder a tus consultas y gestionar solicitudes comerciales. Legitimación: tu consentimiento al enviarnos el formulario. Destinatarios: no cedemos datos a terceros salvo obligación legal. Derechos: acceso, rectificación, supresión, oposición y portabilidad en <a href="mailto:hola@novavision.agency">hola@novavision.agency</a>.</p>
+            <p class="muted">Conservamos los datos solo el tiempo necesario para responder o mientras exista relación comercial.</p>
+          </article>
+
+          <article id="aviso-legal" class="card">
+            <h3 class="card-title">Aviso legal</h3>
+            <p>Este sitio es titularidad de NovaVision Agency. El acceso implica aceptar un uso responsable de la información publicada y de los formularios de contacto. Los contenidos están orientados a clientes profesionales y pueden actualizarse sin aviso previo.</p>
+            <p class="muted">Si detectas algún error o abuso de marca, escríbenos y lo revisaremos con prioridad.</p>
+          </article>
+
+          <article id="cookies" class="card">
+            <h3 class="card-title">Cookies</h3>
+            <p>Utilizamos cookies técnicas para el correcto funcionamiento del sitio y cookies de analítica anónima para medir uso y mejorar la experiencia. Puedes configurar o eliminar cookies desde la configuración de tu navegador.</p>
+            <p class="muted">Al continuar navegando aceptas este uso. No empleamos cookies publicitarias de terceros.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
+
+    <footer class="reveal">
+      <div class="container foot">
+        <small>© <span id="y"></span> NovaVision Agency</small>
+        <div class="links">
+          <a href="#privacidad">Política de privacidad</a>
+          <a href="#aviso-legal">Aviso legal</a>
+          <a href="#cookies">Cookies</a>
+          <a href="https://instagram.com/gallegov_" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
