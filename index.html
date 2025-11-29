@@ -32,7 +32,8 @@
       margin:0;
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
       background:linear-gradient(180deg,var(--bg-2),var(--bg));
-      color:var(--fg)
+      color:var(--fg);
+      scroll-behavior:smooth;
     }
     a{
       color:var(--gold);
@@ -94,7 +95,7 @@
     .hero{padding:84px 0 48px}
     .hero-grid{
       display:grid;
-      grid-template-columns:1.2fr .8fr;
+      grid-template-columns:1fr;
       gap:32px;
       align-items:center
     }
@@ -108,6 +109,33 @@
       padding:64px 0;
       border-top:1px solid rgba(255,255,255,.06)
     }
+      form{
+        display:grid;
+        gap:12px;
+        max-width:640px;
+      }
+      label{font-weight:600;color:#d7dae3}
+      input,textarea{
+        width:100%;
+        padding:12px 14px;
+        border-radius:12px;
+        border:1px solid rgba(255,255,255,.08);
+        background:rgba(255,255,255,.02);
+        color:var(--fg);
+        font-size:16px;
+        transition:border-color .2s ease,box-shadow .2s ease;
+      }
+      input:focus-visible,textarea:focus-visible{
+        outline:none;
+        border-color:var(--gold);
+        box-shadow:0 0 0 3px rgba(245,208,107,.2);
+      }
+      textarea{resize:vertical;min-height:120px}
+      button:disabled{
+        opacity:.65;
+        cursor:not-allowed;
+        box-shadow:none;
+      }
       h2{
         font-size:30px;
         margin:0 0 8px;
@@ -251,15 +279,10 @@
         </div>
 
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn" href="#contacto">Solicitar propuesta</a>
-          <a class="btn btn--ghost" href="#sistema">Cómo trabajamos</a>
+          <a class="btn" href="mailto:contact.novavisionagency@gmail.com?subject=Solicitar%20propuesta&body=Hola%2C%20quiero%20una%20propuesta%20para%20el%20sistema%20de%20reservas.%20Mi%20situaci%C3%B3n%20actual%20es%3A">Solicitar propuesta</a>
+          <a class="btn btn--ghost" href="mailto:contact.novavisionagency@gmail.com?subject=Quiero%20saber%20c%C3%B3mo%20trabaj%C3%A1is&body=Hola%2C%20me%20gustar%C3%ADa%20conocer%20el%20proceso%20de%20trabajo%20y%20pasos%20para%20empezar.">Cómo trabajamos</a>
         </div>
 
-      </div>
-
-      <div class="reveal">
-        <img alt="Vista previa de sistema" loading="lazy"
-        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='620'%3E%3Crect width='100%25' height='100%25' fill='%230b1222'/%3E%3Crect x='24' y='24' width='952' height='160' rx='16' fill='%23111827' stroke='%231e293b'/%3E%3Crect x='24' y='204' width='620' height='392' rx='16' fill='%23111827' stroke='%231e293b'/%3E%3Crect x='664' y='204' width='312' height='392' rx='16' fill='%23111827' stroke='%231e293b'/%3E%3C/svg%3E"/>
       </div>
 
     </div>
@@ -284,7 +307,7 @@
               <li><span class="icon-circle">3</span><div><strong>WhatsApp/CRM</strong> con respuestas predefinidas y filtros para priorizar a quien está listo.</div></li>
             </ul>
             <div class="cta-row">
-              <a class="btn" href="#contacto">Quiero montar el sistema</a>
+              <a class="btn" href="mailto:contact.novavisionagency@gmail.com?subject=Quiero%20montar%20el%20sistema&body=Hola%2C%20quiero%20montar%20el%20sistema%20de%20reservas.%20Mis%20datos%3A">Quiero montar el sistema</a>
               <a class="btn btn--ghost" href="mailto:contact.novavisionagency@gmail.com?subject=Ruta%20de%20reservas&body=Hola%2C%20quiero%20revisar%20el%20flujo%20actual%20y%20ver%20c%C3%B3mo%20puede%20mejorar.">Revisar mi flujo</a>
             </div>
           </div>
@@ -329,8 +352,8 @@
               <li><span class="icon-circle">→</span><div>Iteraciones semanales con reportes claros, sin tecnicismos.</div></li>
             </ul>
             <div class="cta-row">
-              <a class="btn" href="#planes">Ver planes</a>
-              <a class="btn btn--ghost" href="#contacto">Agendar revisión</a>
+              <a class="btn" href="mailto:contact.novavisionagency@gmail.com?subject=Quiero%20ver%20los%20planes&body=Hola%2C%20quiero%20ver%20los%20planes%20y%20recomendaciones%20para%20mi%20caso.%20Detalles%3A">Ver planes</a>
+              <a class="btn btn--ghost" href="mailto:contact.novavisionagency@gmail.com?subject=Agendar%20una%20revisi%C3%B3n&body=Hola%2C%20quiero%20agendar%20una%20revisi%C3%B3n%20de%20mi%20situaci%C3%B3n%20actual.%20Disponibilidad%3A">Agendar revisión</a>
             </div>
           </div>
         </div>
@@ -369,7 +392,7 @@
               <li><span class="icon-circle">✓</span><div>Mensajes de respuesta inmediata en WhatsApp.</div></li>
             </ul>
             <div class="cta-row">
-              <a class="btn" href="#contacto">Empezar validación</a>
+              <a class="btn" href="mailto:contact.novavisionagency@gmail.com?subject=Empezar%20validaci%C3%B3n&body=Hola%2C%20quiero%20empezar%20la%20validaci%C3%B3n%20de%20mi%20oferta.%20Te%20cuento%3A">Empezar validación</a>
               <a class="btn btn--ghost" href="mailto:contact.novavisionagency@gmail.com?subject=Plan%20de%20validaci%C3%B3n&body=Hola%2C%20quiero%20validar%20mi%20oferta%20con%20un%20presupuesto%20controlado.">Consultar presupuesto</a>
             </div>
           </div>
@@ -384,8 +407,8 @@
             </ul>
             <div class="pill"><span>Partner</span>Nos sentamos a revisar números cada semana, sin permanencias largas.</div>
             <div class="cta-row">
-              <a class="btn" href="#contacto">Agendar una llamada</a>
-              <a class="btn btn--ghost" href="#sistema">Ver cómo operamos</a>
+              <a class="btn" href="mailto:contact.novavisionagency@gmail.com?subject=Agendar%20una%20llamada&body=Hola%2C%20quiero%20agendar%20una%20llamada%20para%20entender%20c%C3%B3mo%20pod%C3%A9is%20ayudarme.%20Cu%C3%A1ndo%20os%20va%20bien%3F">Agendar una llamada</a>
+              <a class="btn btn--ghost" href="mailto:contact.novavisionagency@gmail.com?subject=Quiero%20ver%20c%C3%B3mo%20oper%C3%A1is&body=Hola%2C%20quiero%20ver%20c%C3%B3mo%20oper%C3%A1is%20y%20qu%C3%A9%20incluye%20el%20servicio.%20Mi%20negocio%3A">Ver cómo operamos</a>
             </div>
           </div>
         </div>
@@ -451,8 +474,8 @@
         </div>
 
         <div class="cta-row" style="margin-top:24px">
-          <a class="btn" href="#contacto">Quiero resolver mis dudas</a>
-          <a class="btn btn--ghost" href="#gancho">Ver el servicio</a>
+          <a class="btn" href="mailto:contact.novavisionagency@gmail.com?subject=Resolver%20dudas&body=Hola%2C%20tengo%20algunas%20dudas%20antes%20de%20empezar.%20Aqu%C3%AD%20van%3A">Quiero resolver mis dudas</a>
+          <a class="btn btn--ghost" href="mailto:contact.novavisionagency@gmail.com?subject=Ver%20el%20servicio&body=Hola%2C%20quiero%20ver%20el%20detalle%20del%20servicio%20y%20condiciones.%20Te%20comparto%20contexto%3A">Ver el servicio</a>
         </div>
       </div>
     </section>
