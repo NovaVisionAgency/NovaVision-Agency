@@ -185,6 +185,27 @@
         flex-wrap:wrap
       }
     }
+    .toast{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      padding:14px 16px;
+      background:rgba(11,18,34,.95);
+      color:var(--fg);
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      opacity:0;
+      transform:translateY(10px);
+      transition:opacity .25s ease,transform .25s ease;
+      pointer-events:none;
+      z-index:50;
+      max-width:320px;
+      font-weight:600;
+    }
+    .toast.show{
+      opacity:1;
+      transform:translateY(0);
+    }
   </style>
 </head>
 
@@ -481,6 +502,7 @@
     const form = document.getElementById('lead-form');
     const statusEl = document.getElementById('form-status');
     const btn = document.getElementById('submit-btn');
+    let toastTimer;
 
     async function showToast(msg){
       let t = document.querySelector('.toast');
@@ -490,8 +512,11 @@
         document.body.appendChild(t);
       }
       t.textContent = msg;
+      t.classList.remove('show');
+      void t.offsetWidth;
       t.classList.add('show');
-      setTimeout(()=>t.classList.remove('show'), 3000);
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(()=>t.classList.remove('show'), 3000);
     }
 
     if(form){
